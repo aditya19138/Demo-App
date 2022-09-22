@@ -10,12 +10,12 @@ const reviewRoutes = require('./routes/reviews');
 const session = require('express-session');
 const flash = require('connect-flash');
 
-mongoose.connect("mongodb+srv://aditya19138:1KdsghUJD9CbueIC@cluster0.7xuyvae.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://aditya19138:285cECypzSwImO1I@cluster0.7xuyvae.mongodb.net/?retryWrites=true&w=majority")
     .then(() => {
         console.log("Database Connected !!")
     })
     .catch(err => {
-        console.log("DB COnnection Error !!")
+        console.log("DB COnnection Error !!", err)
     });
 
 app.engine('ejs', ejsMate);
